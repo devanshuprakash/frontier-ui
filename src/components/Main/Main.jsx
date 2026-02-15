@@ -1,6 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
-import '../Main/Main.css';
+import './Main.css';
 
 const Main = () => {
   return (
@@ -33,7 +33,21 @@ const Main = () => {
             <img src={assets.code_icon} alt="" />
           </div>
         </div>
+        <div className="main-bottom">
+          <div className="search-box">
+            <input type="text" placeholder='Type your message here...' />
+            <div>
+              <img src={assets.gallery_icon} alt="" />
+              <img src={assets.mic_icon} alt="" />
+              <img src={assets.send_icon} alt="" />
+              
+            </div>
+          </div>
+          <p className='bottom-info'>
+            Try my may powerful prdiction model,made using various ml algorithms and trained on a large dataset to provide accurate and insightful predictions
+          </p>
       </div>
+    </div>
     </div>
   )
 }
