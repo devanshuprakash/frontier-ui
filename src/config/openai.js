@@ -1,15 +1,15 @@
 import OpenAI from "openai";
 import dotenv from "dotenv";
 
-dotenv.config();
+
 
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: "",
 });
 
-export async function askGPT(userMessage) {
+export async function askGPT(PROMPT) {
   const response = await client.chat.completions.create({
-    model: "gpt-4o-mini",   // cheap + fast
+    model: "gpt-4o-mini",  
     messages: [
       {
         role: "system",
@@ -22,5 +22,7 @@ export async function askGPT(userMessage) {
     ],
   });
 
-  return response.choices[0].message.content;
-}
+  ress =  response.choices[0].message.content
+  console.log(ress)
+};
+export default askGPT;
